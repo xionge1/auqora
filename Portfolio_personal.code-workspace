@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Skillbuilder 6-effects_IMG/Exercise-Background-Gradients"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio-Project-Personal-Website-xiongel1",
+		"liveServer.settings.port": 5501
+	}
+}

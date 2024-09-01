@@ -1,0 +1,148 @@
+/* You can add custom CSS and extend Boostrap styles in this file. Remember, Bootstrap is just CSS at the end of the day! */
+
+body {
+  margin: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navbarNav {
+  /* position: relative; */
+  top: 0px;
+  right: 0px;
+  left: 200px;
+  color: pink;
+}
+
+#nav-link{
+  text-align: right;
+}
+
+#home-icon {
+  margin-right: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  /* size: ; */
+}
+
+
+
+/* set position, color, background gradient and bg  */
+#hero-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+  color: pink;
+  background-image: linear-gradient(rgba(3, 65, 136, 0.3), rgba(217, 68, 68, 0.25)), url("img/grass studies.jpg")
+}
+
+.img-thumbnail {
+  text-align: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative; 
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  display: inline-block;
+
+  height: clamp(100px, 20vh, 200px);
+  width: clamp(100px, 20vh, 200px);
+  /* transform: translate(-50%, -50%); */
+  /*
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  position: absolute;
+  background-repeat: no-repeat;
+  margin-bottom: 50px; */
+
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* padding-top: 15%; */
+  color: white;
+  text-shadow: 5px 5px rgba(21, 38, 82, 0.3);
+}
+
+h1 {
+  padding: 20px;
+}
+.mission-img {
+  width: 50vw;
+  padding-bottom: 50px;
+  color: rgba(217, 68, 68, 0.25);
+  mask-image: linear-gradient(to bottom, rgb(186, 172, 136) 0%,rgba(126, 196, 159, 0.339) 100%);
+}
+
+.mission-section {
+  text-align: center;
+}
+
+#mission-textp {
+  margin: 0 auto;
+  font-size: large;
+}
+
+/* .grid-container {
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* Limit the size of the carousel */
+.carousel-container {
+  max-width: 80%; /* Adjust the max-width as needed */
+  max-height: 500px; /* Adjust the max-height as needed */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Ensure the images cover the carousel area without distortion */
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* add background color and styling to skill section */
+#skills-section {
+  background-color: rgba(217, 68, 68, 0.25);
+  padding: 100px 0;
+}
+
+/* .skills-header{
+  padding-bottom: 20px;
+} */
+
+.logo-img {
+  height: 15vh;
+}
+
+.skills-text{
+  text-align: center;
+  height: auto;
+  margin-top: 10px;
+}
+
+footer.text-center {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: silver;
+  text-rendering: geometricPrecision;
+  text-align: center;
+  padding: 10px 0;
+  margin: auto;
+}
+
+.footer-text {
+  color:aliceblue;
+}
+
