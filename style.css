@@ -5,10 +5,16 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+p {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5ch;
+}
+
+
 #navbarNav {
   /* position: relative; */
   top: 0px;
-  right: 0px;
   left: 200px;
   color: pink;
 }
@@ -18,12 +24,11 @@ body {
 }
 
 #home-icon {
-  margin-right: 10px;
   position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
-  /* size: ; */
+  top: 10px; /* Keeps it near the top */
+  left: 20px; /* Move it halfway across the screen */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  
 }
 
 
@@ -100,15 +105,23 @@ h1 {
 /* Limit the size of the carousel */
 .carousel-container {
   max-width: 80%; /* Adjust the max-width as needed */
-  max-height: 80px; /* Adjust the max-height as needed */
+  max-height: 80%; /* Adjust the max-height as needed */
   margin: 0 auto; /* Center the carousel */
+  overflow: hidden;
+  
+}
+.carousel-item img {
+  object-fit: cover; /* Crops the image to fill the container */
+  object-position: top;
+  width: 90%;
+  height: 800px; /* Set the height you want for the carousel images */
+  margin: 0 auto; /* Center the carousel */
+  cursor: pointer; /* Make it clear that the image is clickable */
 }
 
-.carousel-item img {
-  object-fit:cover; /* Ensure the images cover the carousel area without distortion */
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  overflow: scroll;
+#carouselWorks {
+  background: linear-gradient(to bottom, rgba(217, 68, 68, 0.25), rgba(217, 68, 68, 0.1));
+  padding: 40px 0; /* Add padding around the carousel for breathing room */
 }
 
 /* add background color and styling to skill section */
