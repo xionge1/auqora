@@ -10,3 +10,4 @@ fetch('navbar.html')
       })
       .catch(error => console.error('Error loading the navbar:', error));
       
+
