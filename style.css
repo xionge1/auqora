@@ -160,3 +160,13 @@ footer.text-center {
   color:aliceblue;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.artwork-img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
