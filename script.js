@@ -67,11 +67,22 @@ document.addEventListener('DOMContentLoaded', function() {
   if (window.location.pathname.includes('artworks.html')) {
       // Your image loading code here
       const imageFiles = [
-          "ariadne repainted 2024 flat color.jpg", "aubrey flat.jpg",
-          "clouds copy.jpg", "clouds.jpg", "dog tr6 gamer.jpg", "firewatch.jpg",
-          "IMG_0412.jpg", "IMG_0512.jpg", "IMG_0549.jpg", "IMG_0565.jpg",
-          "IMG_0598.jpg", "IMG_2071.jpg", "mel-sketch.jpg", "Simply_Com.jpg",
-          "Still_Life_2.jpg", "transistor-sybil.jpg"
+          "ariadne repainted 2024 flat color.jpg", 
+          "aubrey flat.jpg",
+          "clouds copy.jpg", 
+          "clouds.jpg", 
+          "dog tr6 gamer.jpg", 
+          "firewatch.jpg",
+          "IMG_0412.jpg", 
+          "IMG_0512.jpg", 
+          "IMG_0549.jpg", 
+          "IMG_0565.jpg",
+          "IMG_0598.jpg", 
+          "IMG_2071.jpg", 
+          "mel-sketch.jpg", 
+          "Simply_Com.jpg",
+          "Still_Life_2.jpg", 
+          "transistor-sybil.jpg"
       ];
 
       const imageFolder = "img/Main-Artworks/";

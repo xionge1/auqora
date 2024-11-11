@@ -14,6 +14,7 @@ p {
 
 #navbarNav {
   /* position: relative; */
+  display: block;
   top: 0px;
   left: 200px;
   color: pink;
@@ -165,8 +166,19 @@ footer.text-center {
   flex-wrap: wrap;
   gap: 10px;
 }
-.artwork-img {
+/* .artwork-img {
+  display: block;
   width: 200px;
   height: auto;
   object-fit: cover;
-}
+} */
+ .artwork-img {
+  display: block;
+  object-position: 50% 50%;
+  object-fit: cover;
+  max-width: fit-content;
+  max-height: fit-content;
+  width: auto;
+  height: 300px;
+  margin: 0 auto;
+ }
