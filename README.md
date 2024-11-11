@@ -7,3 +7,6 @@ Inserting in a navbar/header
 
 To insert in navbar to any page, create div and add id = "navbar-placeholder".
 For example, in artworks.html, the line `<div class="d-flex justify-content-end w-10" id = "navbar-placeholder"> </div>` does exactly this.
+
+How to undo one commit:
+`git reset --soft HEAD~1`
