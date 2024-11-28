@@ -21,16 +21,11 @@ p {
 
 #navbarNav {
   /* position: relative; */
-  display: block;
   top: 0px;
-  left: 200px;
-  color: pink;
+  left: 0px;
+  /* background-color: pink;
+  border-color: pink; */
 }
-
-#nav-link{
-  text-align: right;
-}
-
 #home-icon {
   position: fixed;
   top: 10px; /* Keeps it near the top */
@@ -47,8 +42,9 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 80vh;
-  color: pink;
+  min-height: 80vh;
+  padding-bottom: 2rem;
+  /* color: pink; */
   /* background-image: linear-gradient(rgba(3, 65, 136, 0.3), rgba(217, 68, 68, 0.25)), url("img/grass studies.jpg") */
 }
 
@@ -117,14 +113,15 @@ h1 {
 .carousel-item img {
   display: block;
   object-fit: cover; /* Crops the image to fill the container */
-  object-position: top;
-  width: auto;
-  height: 800px; /* Set the height you want for the carousel images */
-  margin: 0 auto; /* Center the carousel */
+  object-position: center;
+  width: 100%;
+  max-height: 500px; /* Set the height you want for the carousel images */
+  margin: 0 auto; /* Center the carousel/image */
   cursor: pointer; /* Make it clear that the image is clickable */
 }
 
 #carouselWorks {
+  margin-top: 3rem;
   background: linear-gradient(to bottom, rgba(217, 68, 68, 0.25), rgba(217, 68, 68, 0.1));
   padding: 40px 0; /* Add padding around the carousel for breathing room */
 }

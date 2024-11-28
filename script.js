@@ -61,7 +61,7 @@ fetch('navbar.html')
 //     .catch(error => console.log("Error fetching image list:", error));
 // });
 
-
+// START of EventListener to load images in gallery (artworks.html)
 document.addEventListener('DOMContentLoaded', function() {
   // Check if the URL contains the specific filename
   if (window.location.pathname.includes('artworks.html')) {
@@ -97,3 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+// END of artworks
+
+
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("navbar-nav");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+// https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+// END of JS for hamburger menu
