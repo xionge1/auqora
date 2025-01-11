@@ -62,7 +62,7 @@ fetch('navbar.html')
 // });
 
 // START of EventListener to load images in gallery (artworks.html)
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
   // Check if the URL contains the specific filename
   if (window.location.pathname.includes('artworks.html')) {
       // Your image loading code here
@@ -95,6 +95,38 @@ document.addEventListener('DOMContentLoaded', function() {
           imgElement.classList.add("artwork-img");
           gallery.appendChild(imgElement);
       });
+  }
+});*/
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if the URL contains the specific filename
+  if (window.location.pathname.includes('artworks.html')) {
+      const imageFolder = "img/Main-Artworks/";
+      const gallery = document.getElementById("artworks-gallery");
+
+      // Fetch the text file containing the image file names
+      fetch('image_names.txt')
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Failed to load image file list');
+              }
+              return response.text(); // Read the file as text
+          })
+          .then(data => {
+              // Split the file content by commas to get an array of image file names
+              const imageFiles = data.split(',').map(file => file.trim());
+
+              // Loop through the image files and create image elements
+              imageFiles.forEach(function(image) {
+                  let imgElement = document.createElement("img");
+                  imgElement.src = imageFolder + image;
+                  imgElement.alt = "Artwork";
+                  imgElement.classList.add("artwork-img");
+                  gallery.appendChild(imgElement);
+              });
+          })
+          .catch(error => console.error('Error loading images:', error));
   }
 });
 // END of artworks
