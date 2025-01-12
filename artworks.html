@@ -18,17 +18,32 @@
     <div class="d-flex justify-content-end w-10" id = "navbar-placeholder"> </div>
     <p>place holder for artworks page</p>
     <!-- START of gallery -->
-    <div id="artworks-gallery" class="gallery"></div>
+    <div id="artworks-gallery" class="gallery container"></div>
         <!-- END of Gallery -->
 
 
     <!-- TO DO: add modal where user can click on image and it will pop up -->
-     <!-- START of MODAL -->
+    <!-- START of MODAL -->
+    <!-- Modal -->
+    <div class="modal fade" id="artworkModal" tabindex="-1" aria-labelledby="artworkModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <!-- Close Button in the Upper Right -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <img id="modalImage" src="" alt="Artwork" class="img-fluid">
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!-- Modal -->
   
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 </html>

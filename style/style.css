@@ -132,10 +132,6 @@ h1 {
   padding: 100px 0;
 }
 
-/* .skills-header{
-  padding-bottom: 20px;
-} */
-
 .logo-img {
   height: 15vh;
 }
@@ -162,24 +158,74 @@ footer.text-center {
   color:aliceblue;
 }
 
+
+
+/* Gallery container */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  gap: 20px; /* Uniform spacing between images */
+  margin: 20px auto; /* Center gallery with margin */
+  padding: 10px; /* Inner padding for the gallery container */
+  max-width: 1200px; /* Limit the gallery's maximum width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
-/* .artwork-img {
+
+/* Grid layout for different screen sizes */
+@media (min-width: 80vw) { /* Desktop screens (≥992px) */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+@media (min-width: 80vw) and (max-width: 991.98px) { /* Medium screens (768px–991.98px) */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 39.99vw) { /* Small screens (≤767.98px) */
+  .gallery {
+    grid-template-columns: repeat(1, 1fr); /* 1 column */
+  }
+}
+
+/* Image styling */
+.artwork-img {
+  width: 100%; /* Image fills the grid cell */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers its container */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+  transition: transform 0.2s ease-in-out; /* Optional: Smooth hover effect */
+}
+
+/* Hover effect */
+.artwork-img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  cursor: pointer; /* Indicate the image is clickable */
+}
+
+#modalImage {
   display: block;
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-} */
- .artwork-img {
-  display: block;
-  object-position: 50% 50%;
-  object-fit: cover;
-  max-width: fit-content;
-  max-height: fit-content;
-  width: auto;
-  height: 300px;
-  margin: 0 auto;
- }
+  margin: 0 auto; /* Center the image */
+  max-width: 100%;
+  max-height: 80vh; /* Limit modal image height for better viewing */
+}
+
+
+
+/* css to style close button --  START */
+.modal-header {
+  border-bottom: none; /* Remove the header border if you don't want it */
+  padding: 1rem; /* Add some padding around the close button */
+}
+
+.btn-close {
+  background-color: transparent; /* Make the button background transparent */
+  border: none; /* Remove borders */
+}
+
+.btn-close:hover {
+  opacity: 0.7; /* Optional: Add hover effect */
+}
+/* css to style close button --  END */
