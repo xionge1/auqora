@@ -16,7 +16,7 @@ fetch('navbar.html')
 document.addEventListener('DOMContentLoaded', function() {
   // Check if the URL contains the specific filename
   if (window.location.pathname.includes('artworks.html')) {
-      const imageFolder = "img/Main-Artworks/";
+      const imageFolder = "img/main-artworks/";
       const gallery = document.getElementById("artworks-gallery");
 
       // Fetch the file containing the image file names
