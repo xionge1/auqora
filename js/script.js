@@ -16,43 +16,37 @@ fetch('navbar.html')
 document.addEventListener('DOMContentLoaded', function() {
   // Check if the URL contains the specific filename
   if (window.location.pathname.includes('artworks.html')) {
-      const imageFolder = "img/Main-Artworks/";
+      const imageFolder = "img/main-artworks/";
       const gallery = document.getElementById("artworks-gallery");
 
-      // Fetch the text file containing the image file names
-      fetch('image_names.txt')
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Failed to load image file list');
-              }
-              return response.text(); // Read the file as text
-          })
-          .then(data => {
-              // Split the file content by commas to get an array of image file names
-              const imageFiles = data.split(',').map(file => file.trim());
+      // Fetch the file containing the image file names
+      fetch("image_names.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to load image file list");
+    }
+    return response.json(); // ✅ parse JSON
+  })
+  .then(imageFiles => {
+    imageFiles.forEach(image => {
+      const imgElement = document.createElement("img");
+      imgElement.src = imageFolder + image;
+      imgElement.alt = "Artwork";
+      imgElement.classList.add("artwork-img");
+      imgElement.style.cursor = "pointer";
 
-              // Loop through the image files and create image elements
-              imageFiles.forEach(function(image) {
-                  let imgElement = document.createElement("img");
-                  imgElement.src = imageFolder + image;
-                  imgElement.alt = "Artwork";
-                  imgElement.classList.add("artwork-img");
-                  imgElement.style.cursor = "pointer"; // Make it clickable
+      imgElement.addEventListener("click", function () {
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = this.src;
+        const artworkModal = new bootstrap.Modal(document.getElementById("artworkModal"));
+        artworkModal.show();
+      });
 
-                  // Add click event to open modal
-                  imgElement.addEventListener("click", function () {
-                      const modalImage = document.getElementById("modalImage");
-                      modalImage.src = this.src; // Set the modal image source
-                      const artworkModal = new bootstrap.Modal(document.getElementById("artworkModal"));
-                      artworkModal.show(); // Show the modal
-                  });
+      gallery.appendChild(imgElement);
+    });
+  })
+  .catch(error => console.error("Error loading images:", error));
 
-                  gallery.appendChild(imgElement);
-              });
-
-              
-          })
-          .catch(error => console.error('Error loading images:', error));
   }
 });
 // END of artworks
@@ -68,5 +62,10 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+
+/*artworks.html - adds event listener to make modal work*/
+// document.addEventListener()
+
 // https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 // END of JS for hamburger menu

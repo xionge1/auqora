@@ -24,3 +24,15 @@ For example, in artworks.html, the line `<div class="d-flex justify-content-end 
 How to undo one commit:
 `git reset --soft HEAD~1`
 
+# when adding new art
+
+1.add art
+2.run script
+node js/generate-image-list.js
+
+# commit everything
+git add .
+git commit -m "Add new artworks"
+git push
+
+

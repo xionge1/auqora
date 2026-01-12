@@ -23,3 +23,25 @@
   height: 300px;
   margin: 0 auto; */
  }
+
+
+ ==== June 25 2025======
+
+ /* Limit the size of the carousel */
+.carousel-container {
+  max-width: 80%; /* Adjust the max-width as needed */
+  max-height: 80%; /* Adjust the max-height as needed */
+  margin: 0 auto; /* Center the carousel */
+  overflow: hidden;
+  
+}
+.carousel-item img {
+  display: block;
+  /*object-fit: cover; /* Crops the image to fill the container */
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  max-height: 500px; /* Set the height you want for the carousel images */
+  margin: 0 auto; /* Center the carousel/image */
+  cursor: pointer; /* Make it clear that the image is clickable */
+}
