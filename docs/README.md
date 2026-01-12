@@ -24,6 +24,8 @@ For example, in artworks.html, the line `<div class="d-flex justify-content-end 
 How to undo one commit:
 `git reset --soft HEAD~1`
 
+
+Add this to my work flow
 # when adding new art
 
 1.add art
