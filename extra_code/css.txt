@@ -1,0 +1,47 @@
+.gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between images */
+  margin: 20px auto; /* Center the gallery */
+}
+
+
+.artwork-img {
+  width: 100%; /* Full width of the grid cell */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers its container */
+  border: 1px solid #ddd; /* Optional: Add a border around images */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a professional look */
+  /* display: grid;
+  object-position: 50% 50%;
+  object-fit: cover;
+  max-width: fit-content;
+  max-height: fit-content;
+  width: auto;
+  height: 300px;
+  margin: 0 auto; */
+ }
+
+
+ ==== June 25 2025======
+
+ /* Limit the size of the carousel */
+.carousel-container {
+  max-width: 80%; /* Adjust the max-width as needed */
+  max-height: 80%; /* Adjust the max-height as needed */
+  margin: 0 auto; /* Center the carousel */
+  overflow: hidden;
+  
+}
+.carousel-item img {
+  display: block;
+  /*object-fit: cover; /* Crops the image to fill the container */
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  max-height: 500px; /* Set the height you want for the carousel images */
+  margin: 0 auto; /* Center the carousel/image */
+  cursor: pointer; /* Make it clear that the image is clickable */
+}
